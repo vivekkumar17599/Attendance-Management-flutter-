@@ -61,11 +61,7 @@ class _AddStudentState extends State<AddStudent> {
                             color: Colors.red,
                             fontSize: 25.0,
                           ),
-                          //hintText: 'Enter students name',
-                         // hintStyle: TextStyle(
-                           // color: Colors.black,
-                          //  fontSize: 20.0,
-                         // ),
+                         
                           icon: Icon(Icons.account_circle),
                         ),
 
@@ -87,11 +83,7 @@ class _AddStudentState extends State<AddStudent> {
                             color: Colors.red,
                             fontSize: 25.0,
                           ),
-                         // hintText: 'Enter Fathers name',
-                          //hintStyle: TextStyle(
-                            //color: Colors.black,
-                           // fontSize: 20.0,
-                         // ),
+                        
                           icon: Icon(Icons.account_circle),
                         ),
 
@@ -132,7 +124,7 @@ class _AddStudentState extends State<AddStudent> {
 
 
                       TextFormField(
-                        // key: _formkey,
+                       
                         controller: AddressController,
                         keyboardType: TextInputType.name,
                         validator: (String value) {
@@ -147,11 +139,7 @@ class _AddStudentState extends State<AddStudent> {
                             color: Colors.red,
                             fontSize: 25.0,
                           ),
-                          //hintText: 'Enter students address',
-                          //hintStyle: TextStyle(
-                           // color: Colors.black,
-                            //fontSize: 20.0,
-                         // ),
+                         
                           icon: Icon(Icons.add_circle_outline),
                         ),
 
@@ -168,8 +156,6 @@ class _AddStudentState extends State<AddStudent> {
                         keyboardType: TextInputType.number,
                         maxLength: 10,
                         decoration: InputDecoration(
-                          // filled: true,
-                          // border: UnderlineInputBorder(),
                           labelText: 'Contact Number :',
                           labelStyle: TextStyle(
                             color: Colors.red,
@@ -213,11 +199,7 @@ class _AddStudentState extends State<AddStudent> {
                             );
                           }
                           );
-                         // setState(() {
-                            //if (_formkey.currentState.validate()) {
-                             // saveDetails();
-                            //}
-                          //});
+                         
                         }
                       ),
                     ]
