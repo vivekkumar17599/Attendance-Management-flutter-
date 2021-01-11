@@ -1,12 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_project/AddStudent.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
-//import 'Homepage.dart';
-//import 'main.dart';
-
 class MarkAttendance extends StatefulWidget {
   @override
   _MarkAttendanceState createState() => _MarkAttendanceState();
@@ -16,8 +12,6 @@ class _MarkAttendanceState extends State<MarkAttendance> {
 String rad;
 
   int selectedRadio;
- // bool checkBoxVaule;
-  //TextEditingController
 TextEditingController DateController,RadController;
   Query ref;
 DatabaseReference rf;
@@ -74,11 +68,6 @@ rf.push().set(rad);
                groupValue:selectedRadio,
                 activeColor: Colors.green,
                onChanged:  setSelectedRadio,
-
-               // onChanged: (val){
-
-                 // setSelectedRadio(val);
-                //}
               ),
               Text('Present',
               style:TextStyle(
@@ -88,14 +77,11 @@ rf.push().set(rad);
 
 
               Radio(
-
                   value: 2,
                   groupValue: selectedRadio,
                   activeColor: Colors.red,
                  onChanged: setSelectedRadio,
-                 // onChanged: (val){
-                   // setSelectedRadio(val);
-                 //}
+                 
                   ),
               Text('Absent',
                   style:TextStyle(
@@ -131,18 +117,7 @@ rf.push().set(rad);
         child: Column(
 
           children: <Widget>[
-            // TextFormField(
-            // controller: DateController,
-            //  border: OutlineInputBorder(
-            //  borderSide: BorderSide(
-            //    width:5.0,
-            //color: Colors.blue,
-            //),
-            //)
-            //),
-            //onTap: () {}
-
-            //),
+          
             TextFormField(
                 validator: (String value) {
                   if (value.isEmpty) {
@@ -162,7 +137,7 @@ rf.push().set(rad);
                   DateController.text =
                   "${date.day.toString()}-${date.month
                       .toString()}-${date.year
-                      .toString()}"; //date.toString();
+                      .toString()}"; 
                 },
                 decoration: InputDecoration(
                   icon: Icon(Icons.calendar_today),
@@ -209,14 +184,11 @@ rf.push().set(rad);
     void saveDetails()
     {
       String DOB = DateController.text;
-     // String rad=  '${RadController.text}';                                     // rf.getCheckedRadioButtonId();
       Map<String, String>Details = {
         'DOB': DOB,
-       // 'Rad': rad.toString(),
       };
 
 rf.push().set(Details);
-//rf.push().set(rad);
 
   }
 }
